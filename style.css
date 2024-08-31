@@ -1,0 +1,556 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500&family=Roboto:wght@300;400;500;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;500;600;700;800;900&display=swap');
+
+/*
+#F2A35E --- marrom claro medio
+#BF4904 --- laranja escuro
+#731A06 --- marrom escuro avermelhado
+#26110D --- marrom escuro pacas
+*/
+
+:root {
+  --font-serif: 'Noto Serif', serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+  font-family: 'Roboto', sans-serif;
+  scroll-behavior: smooth;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 80px;
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+}
+
+.nome {
+  margin-left: 30px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  font-size: 1.5em;
+}
+
+.nome>p,
+#exoticas {
+  color: #BF4904;
+  text-shadow: 1px 0px 1px rgba(0, 0, 0, 0.141);
+  font-family: var(--font-serif);
+  font-weight: 700;
+  margin-right: 200px;
+}
+
+.menu ul {
+  font-size: 1.15em;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.menu li a {
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+  color: #FFF;
+  /* text-shadow: 1px 0px 1px rgba(46, 46, 46, 0.843); */
+}
+
+.menu li a:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+header.rolagem {
+  height: 60px;
+  background-color: white;
+  color: black;
+  box-shadow: 1px 0px 10px rgba(0, 0, 0, 0.219);
+}
+
+header.rolagem a {
+  color: #26110D;
+  text-shadow: none;
+}
+
+.banner {
+  background-image: url('midia/banner2.jpeg');
+  background-position: center center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100vw;
+  height: 100vh;
+  /* ------------------------------- */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* gap: 40px; */
+}
+
+.banner h1 {
+  font-size: 5.3em;
+  color: #FFF;
+  font-family: var(--font-serif);
+  text-shadow: 1px 0px 10px rgba(0, 0, 0, 0.662);
+  margin-top: 100px;
+}
+
+.banner p {
+  font-size: 3.2em;
+  color: white;
+  font-family: var(--font-serif);
+}
+
+.banner button {
+  margin-top: 50px;
+  font-size: 1.2em;
+  height: 60px;
+  width: 180px;
+  border: none;
+  border-radius: 30px;
+  background-color: #BF4904;
+  color: white;
+  font-family: var(--font-serif);
+  box-shadow: 1px 0 15px rgba(0, 0, 0, 0.516);
+}
+
+.banner button:hover {
+  transition: 0.5s;
+  cursor: pointer;
+  background-color: #b34201;
+}
+
+/* QUEM SOMOS -------------------------------- */
+
+#quem-somos {
+  background-color: #fff7f0;
+  padding-top: 40px;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+#quem-somos > img{
+  width: 150px;
+}
+
+#quem-somos>h2 {
+  color: #BF4904;
+  font-family: var(--font-serif);
+  font-size: 3em;
+  text-shadow: 1px 0px 4px rgba(0, 0, 0, 0.193);
+}
+
+#quem-somos>p {
+  font-size: 1.1em;
+  width: 630px;
+  line-height: 34px;
+}
+
+#quem-somos button{
+  cursor: pointer;
+  margin-top: 20px;
+  height: 50px;
+  width: 160px;
+  border: none;
+  border-radius: 30px;
+  background-color: #BF4904;
+  box-shadow: 1px 0 15px rgba(0, 0, 0, 0.516);
+}
+
+#quem-somos a{
+  color: white;
+  font-family: var(--font-serif);
+  font-size: 1.2em;
+}
+
+/* VITRINE DE CARNES NOBRES ------------------- */
+
+#carnes-nobres,
+#carnes-exoticas {
+  padding-top: 60px;
+  color: #FFF;
+  background-color: #26110D;
+  height: 680px;
+  width: 100vw;
+}
+
+.titulo-descricao {
+  margin: 20px 50px 0 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.titulo-descricao h2 {
+  text-align: center;
+  margin-bottom: 10px;
+  color: #BF4904;
+  font-family: var(--font-serif);
+  font-size: 2.2em;
+}
+
+.container-produtos {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+/* CARD DAS CARNES ----------------------------------------------- */
+
+.card-produto {
+  margin: 30px;
+  background-color: white;
+  box-shadow: 0px 0px 16px -12px rgba(0,0,0,0.75);
+  width: 267px;
+  height: 365px;
+}
+
+.card-produto-imagem>img {
+  width: 267px;
+}
+
+.card-produto-info {
+  color: black;
+  margin: 10px 5px 0px 15px;
+}
+
+.card-produto-info>h4 {
+  font-family: var(--font-serif);
+  font-size: 1.32em;
+  color: #BF4904;
+  margin-bottom: 8px;
+}
+
+/* VITRINE DE CARNES EXOTICAS ------------------- */
+
+#carnes-exoticas {
+  background-color: #b8602e;
+}
+
+#carnes-exoticas h2, #carnes-exoticas h4{
+  color: #26110D;
+}
+
+
+/* FOOTER ---------------------------------------------*/
+
+footer {
+  width: 100vw;
+  background-color: #26110D;
+  color: white;
+  padding: 65px 0 10px 0;
+  position: absolute;
+  /* margin-top: 60px; */
+}
+
+#fale-conosco-e-atendimento {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+h4 {
+  font-family: var(--font-serif);
+  font-size: 1.5em;
+  color: #f2a35e;
+}
+
+/* FORMULARIO DE CONTATO */
+
+form {
+  display: flex;
+  flex-direction: row;
+}
+
+#container-form-1,
+#container-form-2 {
+  width: 380px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  margin: 10px;
+  padding: 5px;
+}
+
+#container-form-1>p,
+#container-form-2>p {
+  margin: 10px 0 10px 0;
+}
+
+#container-form-2 {
+  margin-top: 35px;
+}
+
+label,
+.pDourado {
+  color: #f2a35e;
+}
+
+input,
+#mensagem {
+  background-color: white;
+  border: none;
+  border-radius: 2px;
+  margin: 5px 0 5px 0;
+  padding: 5px;
+  font-size: 0.95em;
+  resize: none;
+}
+
+input::placeholder,
+#mensagem::placeholder {
+  color: rgb(121, 121, 121);
+}
+
+input:focus,
+#mensagem:focus {
+  box-shadow: 0 0 0 0;
+  outline: 0;
+}
+
+#mensagem {
+  height: 100px;
+}
+
+.container-radio-button {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 5px;
+}
+
+.radio-button,
+.radio-button--checked {
+  border: 1px solid white;
+  width: 15px;
+  height: 15px;
+  border-radius: 15px;
+}
+
+.radio-button--checked {
+  border: 5px solid #f2a35e;
+}
+
+/* DROPDOWN ---------------------------------------- */
+
+.container-dropdown {
+  display: flex;
+  position: absolute;
+  flex-direction: column;
+  margin: 20px 0 20px 0;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.header-dropdown {
+  background-color: #fff;
+  border-radius: 6px;
+  color: black;
+  padding: 10px;
+  width: 380px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-dropdown p {
+  color: rgb(67, 67, 67);
+}
+
+.header-dropdown i {
+  margin: 0 10px 0 10px;
+}
+
+.item-dropdown {
+  margin-left: 15px;
+  color: black;
+}
+
+.container-itens-dropdown--closed {
+  display: none;
+}
+
+.container-itens-dropdown--opened {
+  width: 380px;
+  margin-top: 5px;
+  padding: 8px 0 8px 0;
+  border-radius: 6px;
+  background-color: #fff;
+  gap: 5px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ------------------------------------------------- */
+
+.container-comunicacoes {
+  margin-top: 90px;
+  position: relative;
+}
+
+.container-checkboxes {
+  margin-top: 5px;
+  display: flex;
+  flex-direction: column;
+}
+
+.checkbox-titulo {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.checkbox,
+.checkbox--checked {
+  height: 18px;
+  width: 18px;
+  /* border: 1px solid white; */
+  border-radius: 4px;
+  margin: 5px;
+  color: transparent;
+  /* ------------------ */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffffff;
+}
+
+.checkbox i {
+  font-size: 15px;
+}
+
+.checkbox--checked {
+  color: #26110D;
+  background-color: #f2a35e;
+}
+
+#botao-submit {
+  cursor: pointer;
+  background-color: #f2a35e;
+  color: #26110D;
+  border: none;
+  border-radius: 30px;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.037);
+  height: 40px;
+  width: 90px;
+  margin-top: 10px;
+  display: flex;
+  align-self: center;
+  justify-content: center;
+  font-size: 1.1em;
+  font-family: var(--font-serif);
+  font-weight: 800;
+}
+
+/* ATENDIMENTO E TELEFONES */
+.atendimento {
+  padding: 5px;
+  margin: 10px;
+  width: 320px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.atendimento>.divisoria {
+  margin: 10px 0 10px 0;
+  display: flex;
+  line-height: 18px;
+  gap: 10px;
+}
+
+.divisoria>i {
+  color: #f2a35e;
+  font-size: 24px;
+}
+
+/* HORARIO E LOCALIZAÇÃO */
+
+.horario-funcionamento {
+  width: 100vw;
+  padding: 5px;
+  margin: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.horario-funcionamento>iframe {
+  margin: 30px 60px 0px 20px;
+  width: 100vw;
+  height: 350px;
+}
+
+/* JANELA MODAL */
+.modal--closed {
+  display: none;
+  position: relative;
+  top: 200px;
+  left: 400px;
+  z-index: 3;
+}
+
+.modal--opened {
+  display: block;
+  position: relative;
+  top: 200px;
+  left: 400px;
+  z-index: 1;
+  background-color: #f2a35e;
+  width: 600px;
+  height: 200px;
+  border: 1px solid #26110D;
+}
+
+.header-modal {
+  display: flex;
+  justify-content: space-between;
+  margin: 8px;
+}
+
+.header-modal>h4 {
+  justify-self: center;
+  color: #26110D;
+}
+
+#conteudo-erro {
+  align-self: center;
+  padding: 10px 10px 10px 10px;
+}
+
+#x {
+  color: #26110D;
+  width: 30px;
+  height: 30px;
+  padding: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
